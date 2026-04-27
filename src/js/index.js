@@ -42,7 +42,9 @@ refs.searchForm.addEventListener('submit', e => {
     return alert('Fill the search field');
   }
 
-  fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${API_KEY}`)
+  fetch(
+    `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${API_KEY}`
+  )
     .then(res => {
       if (!res.ok) {
         throw new Error(res.status);
