@@ -1,23 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Weather</title>
+
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/weather.css" />
+
+    <script type="module" src="./js/index.js"></script>
   </head>
+
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
-
-    <load src="./partials/footer.html" />
-
-    <script type="module" src="./main.js"></script>
+    <section class="weather">
+      <div class="container">
+        <form class="search-form js-search-form">
+          <input class="search-input js-search-input" type="text" name="user_country" />
+          <button class="search-btn" type="submit">пошук</button>
+        </form>
+        <div class="weather-wrapper js-weather-wrapper"></div>
+      </div>
+    </section>
   </body>
 </html>
